@@ -35,10 +35,11 @@ def __check_http_proxies(proxies, isHttp=True):
     else:
         test_url= 'https://httpbin.org/get'
 
-    start_time = time.time()
-    response = requests.get(test_url, headers=get_request_headers(), time_out=TEST_TIMEOUT, proxies=proxies)
-
     try:
+        start_time = time.time()
+        response = requests.get(test_url, headers=get_request_headers(), timeout=TEST_TIMEOUT, proxies=proxies)
+
+
         if response.ok:
 
             # 计算响应时间
@@ -63,7 +64,7 @@ def __check_http_proxies(proxies, isHttp=True):
         return False, nick_type, speed
     except Exception as e:
         # 代理IP不稳定不能用的太多了,这里就不必要记录太多没有用的错误日志
-        # logger.error(e)
+        # logger.debug(e)
         return False, nick_type, speed
 
 
@@ -106,8 +107,9 @@ def check_proxy(proxy):
 
 
 if __name__ == '__main__':
-    proxy = Proxy('60.176.234.179', port='8888')
+    proxy = Proxy('163.125.250.131', port='8118')
 
-    # proxy = Proxy('114.239.148.160', port='808')
-    # proxy = Proxy('117.69.200.125', port='31627')
-    print(check_proxy(proxy))
+    # proxy = Proxy('122.234.92.213', port='9000')
+    # proxy = Proxy('117.69.200.125', port='9000')
+    result = check_proxy(proxy)
+    print("result:", result)
