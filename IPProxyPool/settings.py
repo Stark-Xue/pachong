@@ -15,3 +15,6 @@ LOG_FILENAME = '1og.log'
 
 # 测试代理IP的过期时间
 TEST_TIMEOUT = 10
+
+# MongoDB数据库的URL
+MONGO_URL = 'mongodb://127.0.0.1:27017'
