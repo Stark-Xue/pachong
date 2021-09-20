@@ -74,6 +74,7 @@ class BaseSpider(object):
 
         # 遍历URL列表，获取URL
         for url in self.urls:
+            print(url)
             # 根据发送请求，获取页面数据
             page = self.get_page_from_url(url)
             # 解析页面，提取数据，封装为Proxy对象
