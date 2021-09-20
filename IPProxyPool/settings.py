@@ -18,3 +18,15 @@ TEST_TIMEOUT = 10
 
 # MongoDB数据库的URL
 MONGO_URL = 'mongodb://127.0.0.1:27017'
+
+# 爬虫的全类名/路径：模块.类名
+PROXIES_SPIDERS = [
+
+    'core.proxy_spider.proxy_spiders.KuaiSpider',
+    'core.proxy_spider.proxy_spiders.Ip3366Spider',
+    'core.proxy_spider.proxy_spiders.ProxylistplusSpider',
+    'core.proxy_spider.proxy_spiders.Ip66Spider',
+]
+
+# 爬虫运行的间隔时间，单位为小时h
+RUN_SPIDERS_INTERVAL = 12

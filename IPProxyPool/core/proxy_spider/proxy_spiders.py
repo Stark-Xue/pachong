@@ -23,7 +23,7 @@ class Ip3366Spider(BaseSpider):
     detail_xpath = {
         'ip': "./td[1]/text()",
         'port': './td[2]/text()',
-        'area': './td[6]/text()'
+        'area': './td[5]/text()'
     }
 
     def get_page_from_url(self, url):
