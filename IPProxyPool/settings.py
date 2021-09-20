@@ -30,3 +30,9 @@ PROXIES_SPIDERS = [
 
 # 爬虫运行的间隔时间，单位为小时h
 RUN_SPIDERS_INTERVAL = 12
+
+# 检测代理IP模块运行的间隔时间，单位为小时h
+RUN_TEST_PROXIES_INTERVAL = 2
+
+# 配置检测代理IP的异步数量
+TEST_PROXIES_ASYNC_COUNT = 10
