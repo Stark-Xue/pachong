@@ -36,3 +36,6 @@ RUN_TEST_PROXIES_INTERVAL = 2
 
 # 配置检测代理IP的异步数量
 TEST_PROXIES_ASYNC_COUNT = 10
+
+# 配置获取代理IP的最大数量，这个值越小可用性越高随机性越差
+MAX_PROXIES_COUNT = 50
