@@ -57,6 +57,7 @@ class SocketClient(asyncore.dispatcher):
         """当程序运行过程中发生错误"""
         t, e, trace = sys.exc_info()
         # print(t,e,trace)
+        self.close()
 
     def handle_close(self):
         """当连接被关闭"""
